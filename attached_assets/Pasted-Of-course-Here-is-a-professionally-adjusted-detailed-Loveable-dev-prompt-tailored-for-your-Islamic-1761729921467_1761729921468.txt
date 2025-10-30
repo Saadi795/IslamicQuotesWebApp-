@@ -1,0 +1,62 @@
+Of course! Here is a professionally adjusted, detailed Loveable.dev prompt tailored for your Islamic Quotes app. You can copy and paste this directly into Loveable.dev to generate your application.
+
+---
+
+### **Detailed Loveable.dev Prompt: Islamic Quotes App**
+
+### **General Requirements**
+- The UI should be **clean, modern, and spiritually serene**, optimized for **both mobile and desktop** to provide a reflective experience anywhere.
+- The design should follow the **best UX/UI principles** for content consumption and inspiration.
+- Users should be able to **easily interact** with the app through a main dashboard for browsing quotes and buttons to request new content.
+
+---
+
+### **Webhook Integration with n8n**
+- The app should **send a request to an n8n webhook** to fetch a new quote and **wait for the response** before displaying it.
+- The request to fetch a new quote should be **sent to this webhook**:
+  `[INSERT YOUR N8N WEBHOOK URL HERE]`
+- The webhook **processes the request** and returns a structured JSON response containing the quote text, its source (e.g., Quran, Hadith), and the chapter/verse number if applicable.
+- The app should **dynamically display the new quote** in a beautiful, user-friendly format.
+
+- The app should **send user input to an n8n webhook** and **wait for a response** before displaying results.
+- The webhook request **should be sent using the POST method with data formatted as JSON in the request body**. For a simple "get new quote" action, the body can be: `{"action": "get_quote"}` or include parameters like `{"category": "patience"}` if you implement categories later.
+
+---
+
+### **App-Specific Features**
+- The UI should be designed to support **displaying and discovering inspirational Islamic quotes**.
+- The main interface should allow users to **view a beautifully presented quote, request a new random quote, and share or bookmark their favorites**.
+- The system should provide **a curated, AI-generated (or database-pulled) Islamic quote along with its source and reference**.
+
+---
+
+### **Design & User Experience**
+- **Visual Aesthetic:** **Minimalist, calm, and elegant.** Use a design that inspires peace and reflection. Think of clean layouts with ample whitespace, subtle geometric patterns (Islamic art-inspired), and a serene color palette.
+- **Typography & Colors:**
+  - **Primary Font:** Use a sophisticated serif font like **Playfair Display** for the quote text to convey tradition and wisdom.
+  - **Secondary Font:** Use a clean, readable sans-serif like **Inter** or **Poppins** for the source, buttons, and UI elements.
+  - **Color Palette:** Use deep, rich colors like **#0D3B2A (Dark Green)**, **#8DA399 (Sage Green)**, and **#F5F5F5 (Light Off-White)**. Accents can be in gold **#D4AF37** for a premium feel.
+- **Navigation & UI Flow:**
+  - The app opens to a **main "Card" component** prominently displaying the current quote in large, elegant typography.
+  - Below the quote, clearly display the **source (e.g., "Surah Al-Baqarah")** and **verse number (e.g., "2:286")** in a slightly smaller, respectful style.
+  - Include a **fixed bottom navigation bar or a floating action button (FAB)** with clear call-to-action buttons:
+    - **"New Quote"**: Fetches and displays a new quote from the webhook.
+    - **"Bookmark"** (Heart or Bookmark icon): Allows users to save the current quote to a local list.
+    - **"Share"** (Share icon): Allows users to share the quote as text or an image.
+  - Provide a separate section (e.g., a tab) called **"Bookmarks"** where users can view all their saved quotes in a list.
+
+---
+
+### **Advanced Features (Optional)**
+- Allow users to **bookmark important quotes** for future reference, stored in the browser's local storage.
+- Implement **smooth animations** such as a gentle fade-in when a new quote loads.
+- Add a **"Copy Text" button** to easily copy the quote and its source to the clipboard.
+- **(Future Enhancement)**: Add a **category filter** (e.g., Hope, Patience, Mercy) that users can select before fetching a quote, sending the category to the webhook.
+
+---
+
+### **Deployment Instructions**
+- This app should be **fully functional with no additional coding required** after Loveable.dev generates it.
+- It should be **optimized for mobile & desktop use**.
+- The generated UI should be **fully connected to the n8n webhook backend** to dynamically fetch and display live quotes.
+```

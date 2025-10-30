@@ -1,0 +1,154 @@
+COMPACT & EYE-CATCHING NAVIGATION BARS
+Compact Top Navigation Bar
+css
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: none;
+  z-index: 1000;
+  height: 60px;
+}
+
+.top-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #4CAF50 50%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.top-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.app-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin: 0;
+}
+Compact Bottom Navigation Bar
+css
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.7rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+  border: none;
+  z-index: 1000;
+  height: 60px;
+}
+
+.bottom-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #4CAF50 50%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1rem;
+}
+Compact Professional Buttons
+css
+.nav-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 100px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+Icon + Text Compact Buttons (If you want icons)
+css
+.nav-button.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  min-width: auto;
+}
+
+.nav-button.with-icon i {
+  font-size: 16px;
+}
+Add Subtle Pulse Animation to Borders
+css
+.top-nav::after,
+.bottom-nav::before {
+  animation: borderPulse 3s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.4);
+  }
+}
+Main Content Spacing
+css
+.main-content {
+  padding-top: 70px; /* For top nav */
+  padding-bottom: 70px; /* For bottom nav */
+  min-height: calc(100vh - 140px);
+}
